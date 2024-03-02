@@ -1,11 +1,11 @@
 <?php
-// Simulated array of shared files (replace this with your actual logic)
-$sharedFiles = array(
-    array("filename" => "file1.txt", "filedata" => "This is the content of file 1."),
-    array("filename" => "file2.html", "filedata" => "<html><head><title>File 2</title></head><body><h1>Hello, world!</h1></body></html>")
-);
+// Start or resume the session
+session_start();
 
-// Loop through each shared file and display them
+// Simulated array of shared files (replace this with your actual logic)
+$sharedFiles = isset($_SESSION["shared_files"]) ? $_SESSION["shared_files"] : array();
+
+// Display shared files
 foreach ($sharedFiles as $file) {
     echo '<div class="file">';
     echo '<h3>' . $file["filename"] . '</h3>';
@@ -13,3 +13,22 @@ foreach ($sharedFiles as $file) {
     echo '</div>';
 }
 ?>
+
+<style>
+    /* CSS for shared files */
+    .file {
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+    }
+    .file h3 {
+        margin-top: 0;
+        color: #333;
+    }
+    .file pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+</style>

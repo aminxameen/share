@@ -4,39 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create New File</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
+        /* CSS styles */
         body {
-            background-color: #111;
-            color: #fff;
             font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
         }
         .container {
             max-width: 600px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1 {
+        h1, h2 {
+            color: #333;
             text-align: center;
+        }
+        form {
+            margin-bottom: 20px;
         }
         input[type="text"],
         textarea {
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
-            background-color: #333;
-            border: none;
-            color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: vertical;
         }
         button {
-            background-color: #333;
-            color: #fff;
-            border: none;
+            background-color: #4CAF50;
+            color: white;
             padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
             cursor: pointer;
+            font-size: 16px;
         }
         button:hover {
-            background-color: #555;
+            background-color: #45a049;
         }
     </style>
 </head>
